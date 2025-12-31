@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonus Game – Kandu</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylegame.css" />
+</head>
+
+<body>
+    <div class="game-wrapper">
+        <div class="game-card">
+
+            <h1 class="game-title">🔥 Bonus Game – Kandu</h1>
+
+            <!-- GAME CANVAS -->
+            <canvas id="bonus-canvas"></canvas>
+
+            <!-- HUD -->
+            <div class="hud">
+                <div class="hud-item" id="molotov-count">Molotov: 10</div>
+                <div class="hud-item" id="hits-count">Colpi: 0</div>
+            </div>
+
+            <!-- ACTION BUTTON -->
+            <button id="throw-btn" class="throw-button">
+                🔥 Lancia Molotov
+            </button>
+
+        </div>
+    </div>
+
+    <!-- GAME SCRIPT -->
+    <script src="bonus2.js"></script>
+
+    <!-- INIT -->
+    <script>
+        window.addEventListener("load", () => {
+            if (typeof initBonusGame === "function") {
+                initBonusGame();
+            } else {
+                console.error("initBonusGame non trovato");
+            }
+        });
+    </script>
+</body>
+
+</html>
